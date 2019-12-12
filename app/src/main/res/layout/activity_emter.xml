@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/themeBg"
+    tools:context="com.boosal.smartlibrary.ui.entering.activity.EnterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:orientation="horizontal">
+        
+        <TextView
+            style="@style/TextLightGray"
+            android:text="@string/imported_list"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_23"/>
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/themeWhite"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextDarkGray"
+            android:gravity="center"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="9"
+            android:text="@string/table_no"/>
+
+        <TextView
+            style="@style/TextDarkGray"
+            android:gravity="center"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="11"
+            android:text="@string/table_img"/>
+
+        <TextView
+            style="@style/TextDarkGray"
+            android:gravity="center"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="15"
+            android:text="@string/table_name"/>
+
+        <TextView
+            style="@style/TextDarkGray"
+            android:gravity="center"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="15"
+            android:text="@string/table_isbn"/>
+
+        <TextView
+            style="@style/TextDarkGray"
+            android:gravity="center"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="15"
+            android:text="@string/table_publish"/>
+
+        <TextView
+            style="@style/TextDarkGray"
+            android:gravity="center"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="15"
+            android:text="@string/table_publishtime"/>
+
+        <TextView
+            style="@style/TextDarkGray"
+            android:gravity="center"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="11"
+            android:text="@string/table_category"/>
+
+        <TextView
+            style="@style/TextDarkGray"
+            android:gravity="center"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="9"
+            android:text="@string/table_bindtime"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/enter_rv_books"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:background="@color/themeWhite"
+        android:layout_weight="1"/>
+
+    <com.boosal.smartlibrary.view.CommBottom
+        android:id="@+id/commbottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

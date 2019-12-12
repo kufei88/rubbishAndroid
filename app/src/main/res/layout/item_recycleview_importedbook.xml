@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/dp_83"
+    android:gravity="center"
+    android:paddingTop="@dimen/dp_5"
+    android:paddingBottom="@dimen/dp_5"
+    android:background="@color/themeWhite"
+    android:orientation="horizontal">
+    
+    <TextView
+        android:id="@+id/id"
+        style="@style/TextDarkGray"
+        android:gravity="center"
+        android:layout_width="@dimen/dp_0"
+        android:layout_weight="9"
+        android:text="0001"/>
+
+    <FrameLayout
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="match_parent"
+        android:layout_weight="11">
+
+        <ImageView
+            android:id="@+id/importedbook_iv_img"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_50"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            android:src="@drawable/shuju9787111496007"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/TextDarkGray"
+        android:gravity="center"
+        android:layout_width="@dimen/dp_0"
+        android:layout_weight="15"
+        android:text="数据结构、算法与应用 C++语言描述"/>
+
+    <TextView
+        android:id="@+id/isbn"
+        style="@style/TextDarkGray"
+        android:gravity="center"
+        android:layout_width="@dimen/dp_0"
+        android:layout_weight="15"
+        android:text="9787111496007"/>
+
+    <TextView
+        android:id="@+id/press"
+        style="@style/TextDarkGray"
+        android:gravity="center"
+        android:layout_width="@dimen/dp_0"
+        android:layout_weight="15"
+        android:text="机械工业出版社"/>
+
+    <TextView
+        android:id="@+id/publish_time"
+        style="@style/TextDarkGray"
+        android:gravity="center"
+        android:layout_width="@dimen/dp_0"
+        android:layout_weight="15"
+        android:text="2015年04月"/>
+
+    <TextView
+        android:id="@+id/category"
+        style="@style/TextDarkGray"
+        android:gravity="center"
+        android:layout_width="@dimen/dp_0"
+        android:layout_weight="11"
+        android:text="计算机/网络"/>
+
+    <TextView
+        android:id="@+id/bind_time"
+        style="@style/TextDarkGray"
+        android:gravity="center"
+        android:layout_width="@dimen/dp_0"
+        android:layout_weight="9"
+        android:text="0"/>
+    
+
+</LinearLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/themeBg"
+    android:paddingLeft="@dimen/dp_42"
+    android:paddingRight="@dimen/dp_42"
+    android:orientation="vertical"
+    tools:context="com.boosal.smartlibrary.ui.recognize.activity.RecognizeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView android:id="@+id/recognize_tv_category"
+            style="@style/TextLightGray"
+            android:text="当前类别：计算机/网络"/>
+
+        <Button
+            android:id="@+id/recognize_btn_change"
+            style="@style/TextBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_35"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:background="@drawable/bg_btn_small"
+            android:paddingLeft="@dimen/dp_13"
+            android:paddingRight="@dimen/dp_13"
+            android:text="@string/change_category" />
+
+        <Button
+            android:id="@+id/recognize_btn_grade"
+            style="@style/TextBlue"
+            android:layout_width="82dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:background="@drawable/bg_btn_small"
+            android:paddingLeft="@dimen/dp_13"
+            android:paddingRight="@dimen/dp_13"
+            android:text="@string/choose_grade" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/themeWhite"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextDarkGray"
+            android:gravity="center"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="12"
+            android:text="@string/table_img"/>
+
+        <TextView
+            style="@style/TextDarkGray"
+            android:gravity="center"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="16"
+            android:text="@string/table_name"/>
+
+        <TextView
+            style="@style/TextDarkGray"
+            android:gravity="center"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="16"
+            android:text="@string/table_isbn"/>
+
+        <TextView
+            style="@style/TextDarkGray"
+            android:gravity="center"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="16"
+            android:text="@string/table_publish"/>
+
+        <TextView
+            style="@style/TextDarkGray"
+            android:gravity="center"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="16"
+            android:text="@string/table_publishtime"/>
+
+        <TextView
+            style="@style/TextDarkGray"
+            android:gravity="center"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="12"
+            android:text="@string/table_category"/>
+
+        <TextView
+            style="@style/TextDarkGray"
+            android:gravity="center"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="12"
+            android:text="@string/table_error"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recognize_rv_books"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:layout_weight="1"
+        android:background="@color/themeWhite"/>
+
+
+    <com.boosal.smartlibrary.view.CommBottom
+        android:id="@+id/commbottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

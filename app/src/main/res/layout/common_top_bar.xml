@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/themeDarkBlue"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/SysStatusBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+    <RelativeLayout
+        android:id="@+id/rv_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbar_height">
+
+        <Button
+            android:id="@+id/btnLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:textColor="@color/themeWhite"
+            android:paddingLeft="@dimen/actionbar_button_padding"
+            android:textSize="@dimen/text_22sp" />
+
+        <Button
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:drawablePadding="@dimen/dp_10"
+            android:gravity="center"
+            android:background="@color/transparent"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:textColor="@color/themeWhite"
+            android:textSize="@dimen/text_24sp"
+            android:maxEms="10"
+            android:singleLine="true"/>
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btnExtra"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_44"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:background="@color/transparent"
+            android:ellipsize="start"
+            android:gravity="center"
+            android:paddingLeft="@dimen/actionbar_button_padding"
+            android:paddingRight="@dimen/actionbar_button_padding"
+            android:text=""
+            android:textColor="@color/themeWhite"
+            android:textSize="@dimen/text_17sp" />
+
+        <Button
+            android:id="@+id/btnRight"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:ellipsize="start"
+            android:gravity="center"
+            android:paddingLeft="@dimen/actionbar_button_padding"
+            android:paddingRight="@dimen/actionbar_button_padding"
+            android:textSize="@dimen/text_22sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

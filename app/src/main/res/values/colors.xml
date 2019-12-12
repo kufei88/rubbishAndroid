@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--them-->
+    <color name="transparent">#00000000</color>
+    <color name="themeDarkBlue">#276AF4</color>
+    <color name="themeWhite">#FFFFFF</color>
+    <color name="themeBg">#F5F5F7</color>
+
+    <!--text-->
+    <color name="textLightGray">#B6B8BB</color>
+    <color name="textDarkGray">#5D5E60</color>
+    <color name="textBlack">#242425</color>
+
+    <color name="color_f6">#f6f6f6</color>
+    <color name="line_color">#F0F0ED</color>
+
+</resources>

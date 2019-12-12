@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/themeBg"
+    android:paddingTop="@dimen/dp_10"
+    android:paddingBottom="@dimen/dp_10"
+    android:paddingLeft="@dimen/dp_42"
+    android:paddingRight="@dimen/dp_42"
+    tools:context="com.boosal.smartlibrary.ui.setting.activity.SettingActivity">
+
+    <RelativeLayout
+        android:padding="@dimen/dp_24"
+        android:background="@color/themeWhite"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100">
+        
+        <ImageView
+            android:id="@+id/setting_iv_voice"
+            android:layout_width="@dimen/dp_34"
+            android:layout_height="@dimen/dp_34"
+            android:layout_centerVertical="true"
+            android:src="@drawable/voice"/>
+
+        <TextView
+            style="@style/TextBlack"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/setting_iv_voice"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:text="@string/system_voice"/>
+        
+        <SeekBar
+            android:max="100"
+            android:id="@+id/setting_sk_voice"
+            android:layout_width="@dimen/dp_300"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+        
+    </RelativeLayout>
+
+    <View
+        android:layout_marginTop="@dimen/dp_2"
+        android:background="@color/themeWhite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

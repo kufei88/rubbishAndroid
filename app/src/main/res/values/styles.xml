@@ -1,0 +1,37 @@
+<resources>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!--横向分割线-->
+    <style name="horizontal_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_1</item>
+        <item name="android:background">@color/textLightGray</item>
+    </style>
+
+    <style name="Text_20sp_Base">
+        <item name="android:textSize">@dimen/text_20sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextBlack" parent="Text_20sp_Base">
+        <item name="android:textColor">@color/textBlack</item>
+    </style>
+
+    <style name="TextBlue" parent="Text_20sp_Base">
+        <item name="android:textColor">@color/themeDarkBlue</item>
+    </style>
+
+    <style name="TextLightGray" parent="Text_20sp_Base">
+        <item name="android:textColor">@color/textLightGray</item>
+    </style>
+
+    <style name="TextDarkGray" parent="Text_20sp_Base">
+        <item name="android:textColor">@color/textDarkGray</item>
+    </style>
+
+</resources>

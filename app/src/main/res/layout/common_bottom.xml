@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/dp_24"
+    android:paddingBottom="@dimen/dp_24"
+    android:paddingRight="@dimen/dp_120"
+    android:paddingLeft="@dimen/dp_120">
+
+    <Button
+        android:id="@+id/commbottom_btn_previous"
+        style="@style/TextBlue"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_18"
+        android:paddingLeft="@dimen/dp_18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@drawable/bg_btn_click_txt"
+        android:background="@drawable/bg_btn_click"
+        android:text="@string/previous_page"/>
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_1"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/commbottom_et_current"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_18"
+            android:paddingLeft="@dimen/dp_18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/dp_70"
+            style="@style/TextBlack"
+            android:singleLine="true"
+            android:inputType="number"
+            android:gravity="center"
+            android:text="1"
+            android:maxLines="1"
+            android:background="@drawable/bg_btn_gray"/>
+        
+        <TextView
+            android:id="@+id/commbottom_tv_total"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_40"
+            style="@style/TextBlack"
+            android:text="页 / 1"/>
+
+        <Button
+            android:id="@+id/commbottom_btn_jump"
+            style="@style/TextBlack"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_18"
+            android:paddingLeft="@dimen/dp_18"
+            android:background="@drawable/bg_btn_gray"
+            android:text="@string/jump"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/commbottom_btn_next"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_18"
+        android:paddingLeft="@dimen/dp_18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@drawable/bg_btn_click_txt"
+        android:background="@drawable/bg_btn_click"
+        android:layout_alignParentRight="true"
+        style="@style/TextBlue"
+        android:text="@string/next_page"/>
+
+</RelativeLayout>

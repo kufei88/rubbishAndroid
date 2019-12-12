@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_600"
+    android:layout_height="wrap_content"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bg_popup">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        style="@style/TextBlack"
+        android:gravity="center"
+        android:text="@string/choose_category"/>
+
+    <View style="@style/horizontal_line"/>
+
+    <com.zhy.view.flowlayout.TagFlowLayout
+        android:id="@+id/id_flowlayout"
+        zhy:max_select="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_30"/>
+    
+    <Button
+        android:id="@+id/lin_confirm"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:layout_width="@dimen/dp_130"
+        android:layout_height="@dimen/dp_40"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/bg_btn_small_blue"
+        android:text="@string/confirm"
+        style="@style/TextBlack"
+        android:textColor="@color/themeWhite"/>
+
+</LinearLayout>

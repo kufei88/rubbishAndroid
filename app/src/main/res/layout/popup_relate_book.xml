@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_360"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_popup">
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        style="@style/TextBlack"
+        android:text="@string/bind_success"
+        android:gravity="center"/>
+
+    <View style="@style/horizontal_line"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/dp_60"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingBottom="@dimen/dp_5"
+        android:paddingLeft="@dimen/dp_19"
+        android:paddingRight="@dimen/dp_19">
+
+        <TextView
+            style="@style/TextBlack"
+            android:layout_centerVertical="true"
+            android:text="@string/current_bind"/>
+
+        <TextView
+            android:id="@+id/relate_tv_name"
+            android:layout_alignParentRight="true"
+            style="@style/TextBlack"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_100"
+            android:text="----"/>
+
+    </RelativeLayout>
+
+    <View style="@style/horizontal_line"
+        android:layout_marginRight="@dimen/dp_19"
+        android:layout_marginLeft="@dimen/dp_19"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/dp_60"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingBottom="@dimen/dp_5"
+        android:paddingLeft="@dimen/dp_19"
+        android:paddingRight="@dimen/dp_19">
+
+        <TextView
+            style="@style/TextBlack"
+            android:layout_centerVertical="true"
+            android:text="@string/table_category"/>
+
+        <TextView
+            android:id="@+id/relate_tv_category"
+            android:layout_alignParentRight="true"
+            style="@style/TextBlack"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_100"
+            android:text="----"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_70">
+
+        <Button
+            android:id="@+id/lin_confirm"
+            android:layout_width="@dimen/dp_130"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/bg_btn_small_blue"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/confirm"
+            style="@style/TextBlack"
+            android:textColor="@color/themeWhite"/>
+
+    </FrameLayout>
+
+</LinearLayout>

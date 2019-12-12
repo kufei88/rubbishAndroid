@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_popup_category"
+    android:padding="@dimen/dp_10"
+    style="@style/TextBlack"
+    android:text="Helloworld"
+    android:layout_margin="@dimen/dp_5"
+    android:textColor="@drawable/bg_popup_category_txt">
+
+</TextView>

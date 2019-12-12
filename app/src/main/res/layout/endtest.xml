@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_360"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/dp_211"
+    android:orientation="vertical"
+    android:background="@drawable/bg_popup">
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        style="@style/TextBlack"
+        android:text="@string/gread"
+        android:gravity="center"/>
+
+    <View style="@style/horizontal_line"/>
+
+    <RelativeLayout
+        android:paddingLeft="@dimen/dp_24"
+        android:paddingRight="@dimen/dp_24"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/dp_100">
+
+        <TextView
+            android:id="@+id/tv_delete_book"
+            style="@style/TextBlack"
+            android:text="是否删除《钢铁是怎样炼成的》?"
+            android:layout_centerVertical="true"/>
+
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="@dimen/dp_24"
+        android:paddingLeft="@dimen/dp_24"
+        android:orientation="horizontal">
+
+<!--        <Button-->
+<!--            android:id="@+id/lin_cancel"-->
+<!--            android:layout_width="@dimen/dp_130"-->
+<!--            android:layout_height="@dimen/dp_40"-->
+<!--            android:background="@drawable/bg_btn_small_white"-->
+<!--            style="@style/TextBlue"-->
+<!--            android:text="@string/cancel"/>-->
+
+        <Button
+            android:id="@+id/lin_confirm"
+            android:layout_gravity="center"
+
+            android:layout_width="@dimen/dp_130"
+            android:layout_height="@dimen/dp_40"
+            android:background="@drawable/bg_btn_small_blue"
+            style="@style/TextBlue"
+            android:textColor="@color/themeWhite"
+            android:text="@string/confirm"/>
+
+    </LinearLayout>
+
+</LinearLayout>
