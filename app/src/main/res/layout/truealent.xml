@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_400"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/dp_400"
+    android:orientation="vertical"
+    android:background="@drawable/bg_popup">
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        style="@style/TextBlack"
+        android:text="@string/alert_true"
+        android:gravity="center"/>
+
+    <View style="@style/horizontal_line"/>
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_300"
+        android:layout_height="@dimen/dp_300"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/atrue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_80"
+            android:src="@drawable/atrue" />
+
+    </RelativeLayout>
+
+
+
+
+<!--    <LinearLayout-->
+<!--        android:gravity="center"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:paddingRight="@dimen/dp_24"-->
+<!--        android:paddingLeft="@dimen/dp_24"-->
+<!--        android:orientation="horizontal">-->
+
+<!--&lt;!&ndash;        <Button&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/lin_cancel"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="@dimen/dp_130"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="@dimen/dp_40"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:background="@drawable/bg_btn_small_white"&ndash;&gt;-->
+<!--&lt;!&ndash;            style="@style/TextBlue"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="@string/cancel"/>&ndash;&gt;-->
+
+<!--        <Button-->
+<!--            android:id="@+id/lin_confirm"-->
+<!--            android:layout_gravity="center"-->
+
+<!--            android:layout_width="@dimen/dp_130"-->
+<!--            android:layout_height="@dimen/dp_40"-->
+<!--            android:background="@drawable/bg_btn_small_blue"-->
+<!--            style="@style/TextBlue"-->
+<!--            android:textColor="@color/themeWhite"-->
+<!--            android:text="@string/confirm"/>-->
+
+<!--    </LinearLayout>-->
+
+</LinearLayout>

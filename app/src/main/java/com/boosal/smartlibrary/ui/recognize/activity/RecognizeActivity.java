@@ -2,6 +2,7 @@ package com.boosal.smartlibrary.ui.recognize.activity;
 
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
@@ -25,6 +26,8 @@ import com.boosal.smartlibrary.utils.KeyBoardUtils;
 import com.boosal.smartlibrary.utils.Logger;
 import com.boosal.smartlibrary.utils.MediaPlayerUtil;
 import com.boosal.smartlibrary.view.CommBottom;
+import com.boosal.smartlibrary.widget.popup.AlertFalsePopup;
+import com.boosal.smartlibrary.widget.popup.AlertTruePopup;
 import com.boosal.smartlibrary.widget.popup.DeleteBookPopup;
 import com.boosal.smartlibrary.widget.popup.EndGreadPopup;
 import com.boosal.smartlibrary.widget.popup.SelectCategoryPopup;
@@ -34,6 +37,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -52,6 +57,8 @@ public class RecognizeActivity extends BaseActivity implements CommBottom.CommBo
     private TagContract.Presenter tagPresenter;
     private SelectCategoryPopup categoryPopup;
     private EndGreadPopup cpp;//结束测试窗体
+    private AlertTruePopup alertT;
+    private AlertFalsePopup alertF;
     private List<Category> categories;
     private String currentCategory = "";
     private RecognizeAdapter adapter;
@@ -102,6 +109,8 @@ public class RecognizeActivity extends BaseActivity implements CommBottom.CommBo
         tagPresenter = new TagPresenterImpl(this);
         categoryPopup = new SelectCategoryPopup(this,this);
         cpp = new EndGreadPopup(this);
+        alertT=new AlertTruePopup(this);
+        alertF=new AlertFalsePopup(this);
         categories = dbPresenter.getAllCategories();
 
         categoryPopup.setCategories(categories);
@@ -137,6 +146,10 @@ public class RecognizeActivity extends BaseActivity implements CommBottom.CommBo
     //测试结束，弹出结束窗口计算分数并显示
     @OnClick(R.id.recognize_btn_grade)
     public void onViewClickedGrade() {
+        float chuy=map.get("厨余垃圾");
+        float youhai=map.get("有害垃圾");
+        float qita=map.get("其他垃圾");
+        float kehuishou=map.get("可回收垃圾");
         int i=0;
         //计算总分
         i=(map.get("厨余垃圾")+map.get("有害垃圾")+map.get("其他垃圾")+map.get("可回收垃圾"))*20;
@@ -179,13 +192,24 @@ public class RecognizeActivity extends BaseActivity implements CommBottom.CommBo
         if(errors.size() != 0 && books.size() != 0){
             if(_books.size() >trueCount ){
                 map.put(_books.get(0).getCategory_name(),books.size());
+
+                alertT.showPopupWindow();
                 MediaPlayerUtil.playmusic(this, Uri.parse("android.resource://"
                         + this.getPackageName() + "/" + R.raw.play_true));
                 trueCount=_books.size();
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        alertT.dismiss();
+                    }
+                }, 2000);
+
             }
         }
 
     }
+
     //垃圾投放错误时发生的情况
     @Override
     public void trueBooks(List<Book> _books){
@@ -199,9 +223,17 @@ public class RecognizeActivity extends BaseActivity implements CommBottom.CommBo
         trues.add(books.size());
         if(trues.size() != 0 && books.size() != 0){
             if(_books.size() >falseCount){
+                alertF.showPopupWindow();
                 MediaPlayerUtil.playmusic(this, Uri.parse("android.resource://"
                         + this.getPackageName() + "/" + R.raw.play_false));
                 falseCount=_books.size();
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        alertF.dismiss();
+                    }
+                }, 2000);
             }
         }
     }

@@ -25,6 +25,8 @@
     <string name="bind_success">绑定成功</string>
     <string name="imported_list">已导入的信息</string>
     <string name="gread">测试结果</string>
+    <string name="alert_true">正确</string>
+    <string name="alert_false">错误</string>
     <!-- table -->
     <string name="table_no">序号</string>
     <string name="table_img">图片</string>

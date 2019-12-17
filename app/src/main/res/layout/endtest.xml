@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="@dimen/dp_360"
+    android:layout_width="@dimen/dp_800"
     android:layout_height="wrap_content"
-    android:minHeight="@dimen/dp_211"
+    android:minHeight="@dimen/dp_600"
     android:orientation="vertical"
     android:background="@drawable/bg_popup">
     
@@ -14,6 +14,19 @@
         android:gravity="center"/>
 
     <View style="@style/horizontal_line"/>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="@dimen/dp_300"
+        android:layout_height="@dimen/dp_300"
+        android:orientation="vertical">
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pieChart"
+        />
+    </RelativeLayout>
 
     <RelativeLayout
         android:paddingLeft="@dimen/dp_24"
@@ -26,6 +39,7 @@
             android:id="@+id/tv_delete_book"
             style="@style/TextBlack"
             android:text="是否删除《钢铁是怎样炼成的》?"
+            android:textSize="26sp"
             android:layout_centerVertical="true"/>
 
 
