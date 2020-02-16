@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="@dimen/dp_250"
+    android:layout_height="@dimen/dp_80"
     android:background="@drawable/bg_popup_category"
     android:padding="@dimen/dp_10"
     style="@style/TextBlack"
-    android:text="Helloworld"
-    android:layout_margin="@dimen/dp_5"
+    android:text="可回收垃圾"
+    android:gravity="center"
+    android:layout_marginBottom="@dimen/dp_15"
+    android:layout_marginLeft="@dimen/dp_15"
+
+    android:textSize="40sp"
     android:textColor="@drawable/bg_popup_category_txt">
 
 </TextView>

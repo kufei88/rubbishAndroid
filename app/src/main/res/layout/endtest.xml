@@ -38,7 +38,7 @@
         <TextView
             android:id="@+id/tv_delete_book"
             style="@style/TextBlack"
-            android:text="是否删除《钢铁是怎样炼成的》?"
+            android:text="本次测试结果：0分"
             android:textSize="26sp"
             android:layout_centerVertical="true"/>
 

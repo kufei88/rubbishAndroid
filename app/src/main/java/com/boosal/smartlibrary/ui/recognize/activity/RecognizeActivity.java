@@ -98,13 +98,7 @@ public class RecognizeActivity extends BaseActivity implements CommBottom.CommBo
         setTopTitle(R.string.top_title_recognition, R.color.themeWhite);
         setLeftButtonImage(R.drawable.back);
         setLeftButtonText(R.string.back);
-
-        //初始化map内部的值
-        map.put("厨余垃圾",0);
-        map.put("有害垃圾",0);
-        map.put("其他垃圾",0);
-        map.put("可回收垃圾",0);
-
+        Reset();
         dbPresenter = new DataBasePresenterImpl(this);
         tagPresenter = new TagPresenterImpl(this);
         categoryPopup = new SelectCategoryPopup(this,this);
@@ -115,6 +109,15 @@ public class RecognizeActivity extends BaseActivity implements CommBottom.CommBo
 
         categoryPopup.setCategories(categories);
         categoryPopup.setOutSideDismiss(false);
+    }
+    //初始化map内部与用于标记的值
+    private void Reset(){
+        map.put("厨余垃圾",0);
+        map.put("有害垃圾",0);
+        map.put("其他垃圾",0);
+        map.put("可回收垃圾",0);
+        trueCount=0;//当前投放正确的数量
+        falseCount=0;//当前投放错的误数量
     }
 
     @Override
@@ -191,8 +194,8 @@ public class RecognizeActivity extends BaseActivity implements CommBottom.CommBo
         errors.add(books.size());
         if(errors.size() != 0 && books.size() != 0){
             if(_books.size() >trueCount ){
-                map.put(_books.get(0).getCategory_name(),books.size());
-
+                String bname=_books.get(0).getCategory_name();
+                map.put(bname,map.get(bname)+books.size());
                 alertT.showPopupWindow();
                 MediaPlayerUtil.playmusic(this, Uri.parse("android.resource://"
                         + this.getPackageName() + "/" + R.raw.play_true));

@@ -4,6 +4,7 @@
     <!--them-->
     <color name="transparent">#00000000</color>
     <color name="themeDarkBlue">#276AF4</color>
+    <color name="themeDarkGreen">#7CFC00</color>
     <color name="themeWhite">#FFFFFF</color>
     <color name="themeBg">#F5F5F7</color>
 
